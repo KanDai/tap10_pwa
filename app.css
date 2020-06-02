@@ -1,0 +1,54 @@
+@charset 'UTF-8';
+
+html {
+  font-family: sans-serif;
+  touch-action: manipulation;
+}
+.container {
+  padding: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+}
+.title {
+  font-size: 20px;
+  margin: 10px 0 20px;
+}
+.btn-tap {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #a0ce00;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.btn-tap:disabled {
+  background-color: #ddd;
+  color: #aaa;
+}
+.btn-tap span {
+  font-size: 60px;
+}
+.btn {
+  display: inline-block;
+  margin: 30px 0 0;
+  padding: 15px 60px;
+  border: none;
+  border-radius: 10px;
+  background-color: #54bbc1;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.time span {
+  display: inline-block;
+  width: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
