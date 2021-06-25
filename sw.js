@@ -16,7 +16,7 @@ workbox.precaching.precacheAndRoute([
     revision: '12345'
   },
   {
-　url: '/app.js',
+  url: '/app.js',
     revision: '12345'
   },
 ])
