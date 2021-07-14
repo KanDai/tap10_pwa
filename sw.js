@@ -9,14 +9,14 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox
 workbox.precaching.precacheAndRoute([
   {
     url: '/index.html',
-    revision: '12345'
+    revision: '20210714'
   },
   {
     url: '/app.css',
-    revision: '12345'
+    revision: '20210714'
   },
   {
   url: '/app.js',
-    revision: '12345'
+    revision: '20210714'
   },
 ])
