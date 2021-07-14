@@ -3,6 +3,7 @@ let isPlaying = false
 let tapCount, time = 0
 const tapBtn    = document.getElementById('js-tapBtn')
 const startBtn  = document.getElementById('js-startBtn')
+const tweetBtn  = document.getElementById('js-tweetBtn')
 const countText = document.getElementById('js-count')
 const timeText  = document.getElementById('js-time')
 
@@ -28,6 +29,7 @@ startBtn.addEventListener('click', () => {
   isPlaying = true
   tapBtn.disabled = false
   startBtn.style.display = 'none'
+  tweetBtn.style.display = 'none'
 
   const timer = setInterval( () => {
     time -= 10
@@ -37,7 +39,17 @@ startBtn.addEventListener('click', () => {
       clearInterval(timer)
       isPlaying = false
       startBtn.style.display = 'inline-block'
+      tweetBtn.style.display = 'inline-block'
       startBtn.innerText = 'もう一回'
     }
   }, 10)
+})
+
+// 結果をつぶやく
+tweetBtn.addEventListener('click', () => {
+  const text = encodeURIComponent('10秒間で' + tapCount + '回タップしました')
+  const hashtags = encodeURIComponent('10秒で何回タップできるか')
+  const url = encodeURIComponent('https://tap10.netlify.app/')
+  const payload = `text=${text}&hashtags=${hashtags}&url=${url}`
+  window.open('https://twitter.com/intent/tweet?' + payload, '_blank');
 })
