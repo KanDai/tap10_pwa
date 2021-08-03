@@ -30,15 +30,16 @@ if ('serviceWorker' in navigator) {
 <!-- OneSignalのコード -->
 <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 <script>
-var OneSignal = window.OneSignal || [];
+window.OneSignal = window.OneSignal || [];
 OneSignal.push(function() {
     OneSignal.init({
-        appId: "b2cd2060-8466-48be-95b9-ac1148f61a1a",
+        appId: "ff89554c-9ee2-49bb-adec-15934e1f0e1f",
+        safari_web_id: "web.onesignal.auto.4e6ae055-7872-4c1f-b42a-6c60bed16bbe",
         notifyButton: {
-            enable: true,
+        enable: true,
         },
-    });
-});
+    })
+})
 </script>
 </head>
 <body>
